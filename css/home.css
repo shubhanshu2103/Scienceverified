@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+
+body{
+    background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.carousel {
+    padding: 50px 5vw 20px 5vw;
+}
+
+.carousel-inner {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+}
+
+.carousel-item {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    height: 600px;
+    object-fit: cover;
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05);
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    background: rgba(0, 255, 242, 0.795);
+    border-radius: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 7rem;
+}
+
+.carousel-indicators {
+    margin-bottom: -1rem;
+    color: black;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    color: black;
+}
+
+.carousel-indicators button.active {
+    opacity: 1;
+}
+
+.posts{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.post-header{
+    display: flex;
+    justify-content: center;
+    margin: 30px auto 30px;
+    font-family: poppins;
+
+}
+
+.post-header h3{
+    font-family: poppins;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    
+    
+}
+
+.post-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+.postcard img{
+    border-radius: 10px;
+    border: 1px solid #64ffda;
+    width: 28.6vw !important;
+}
+
+@media (max-width: 1200px) {
+    .post-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2vw;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .postcard img{
+        border-radius: 10px;
+        border: 1px solid #64ffda;
+        width: 44vw !important;
+    }    
+
+}
+@media (max-width: 768px) {
+    .post-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2vw;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .postcard img{
+        border-radius: 10px;
+        border: 1px solid #64ffda;
+        width: 90vw !important;
+    }  
+    
+    
+
+}
+

@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 12, 45, 0.98) 0%,
+        rgba(0, 24, 90, 0.95) 50%,
+        rgba(0, 36, 125, 0.92) 100%
+    );
+}
+
+.land{
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.land::after{
+    content: '';
+    width: 100%;
+    height: 100vh;
+    background-image: 
+        radial-gradient(1px 1px at 20px 30px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 50px 160px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(3px 3px at 160px 120px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 180px 150px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 200px 200px, #fff, rgba(0,0,0,0)),
+        radial-gradient(3px 3px at 220px 10px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 240px 220px, #fff, rgba(0,0,0,0));
+    position: absolute;
+    background-repeat: repeat;
+    background-size: 250px 250px;
+    z-index: -1;
+    animation: move 30s linear infinite, twinkle-twinkle-little-star 2s infinite ease-in-out;
+
+}
+
+@keyframes move {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -250px -250px;
+    }
+}
+
+@keyframes twinkle-twinkle-little-star{
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+
+.logo-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.index-logo{
+    width: 120px;
+}
+
+.intro{
+    margin-bottom: 40px;
+}
+
+.buttons{
+    display: flex;
+    gap: 50px;   
+}
+
+.git-button{
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    transition: 0.3s
+}
+
+.git-button, .explore-button i{
+    margin-right: 5px;   
+}
+
+.explore-button{
+    background-color: transparent;
+    border: 2px solid #00f7ff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    transition: 0.3s
+}
+
+.explore-button:hover, .git-button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 247, 255, 0.1);
+    transition: 0.3s;
+}
+
+
+
+
+.logo {
+    padding: 0.5rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    background: rgba(10, 25, 47, 0.7);
+    border-radius: 8px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    transition: all 0.3s ease;
+    height: 40px;
+    padding: 20px 40px;
+    
+}
+
+.atom-icon {
+    position: relative;
+    margin-right: 12px;
+}
+
+.atom-icon .fa-atom {
+    font-size: 1.4rem;
+    color: #64ffda;
+    animation: atom 4s linear infinite;
+    position: relative;
+    z-index: 1;
+}
+
+.glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #64ffda;
+    filter: blur(10px);
+    opacity: 0.25;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.logo-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #64ffda 50%, 
+        transparent 100%);
+    opacity: 0.5;
+}
+
+.logo-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.logo-science {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #ccd6f6;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo-verified {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #64ffda;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.logo-container:hover {
+    border-color: rgba(100, 255, 218, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container:hover .glow-effect {
+    opacity: 0.25;
+}
+
+.logo-container:hover .logo-line {
+    opacity: 0.8;
+}
+
+
+@keyframes atom {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50%{
+        transform: translateY(-3px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(360deg);
+    }
+}
+
+
+
